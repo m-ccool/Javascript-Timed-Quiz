@@ -122,7 +122,7 @@ footer span {
 
 #pencil-icon {
   /*opacity: .5;*/
-  font-size: calc(1.2rem + 1vw);
+  /*font-size: calc(1.2rem + 1vw);*/
   margin: 0 1rem;
   color: var(--gray);
 }
