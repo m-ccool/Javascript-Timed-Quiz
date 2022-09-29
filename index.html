@@ -11,6 +11,7 @@
     <link rel="icon" type="image/png" sizes="96x96" href="assets/img/pencil-favicon.png">
     <link rel="icon" type="image/png" sizes="96x96" href="assets/img/pencil-favicon.png">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="assets/css/styles.css">
@@ -18,14 +19,32 @@
 
 <body>
     <nav class="navbar navbar-light navbar-expand-md text-nowrap">
-        <div class="container-fluid"><span class="text-nowrap h2" id="nav-name"><a href="#"><span style="color: rgba(0, 0, 0, 0.9);">CODE QUIZ</span></a><i class="fas fa-pencil-alt" data-bss-hover-animate="rubberBand" id="pencil-icon"></i><br></span><a id="view-high-scores" href="#"><span style="color: rgb(33, 37, 41);">view high scores</span><br></a><span class="text-nowrap d-md-flex align-items-md-center" id="time-label"><span id="label">time:&nbsp;</span>&nbsp;<span id="timer-output">0</span></span></div>
+        <div class="container-fluid">
+            <span class="text-nowrap h2" id="nav-name"><a href="#">
+                <span style="color: rgba(0, 0, 0, 0.9);">CODE QUIZ</span></a>
+                <i class="fas fa-pencil-alt" id="pencil-icon"></i><br></span>
+                
+                <a id="view-high-scores" href="#"><span style="color: rgb(33, 37, 41);">view high scores</span><br></a><span class="text-nowrap d-md-flex align-items-md-center" id="time-label"><span id="label">time:&nbsp;</span>&nbsp;<span id="timer-output" class="off">0</span></span></div>
     </nav>
     <main>
-        <h1 id="title">click to begin!</h1>
+        <h1 id="title">click to start quiz</h1>
         <h1 id="title-2">Progressive Web API Developer Quiz</h1>
-        <div id="quiz-card"><i class="fas fa-pencil-alt" data-bss-hover-animate="rubberBand" id="pencil-icon"></i>
+        <div id="quiz-card"><i class="fas fa-medal visually-hidden" data-bss-hover-animate="rubberBand" id="medal-icon"></i><i class="fas fa-pencil-alt" data-bss-hover-animate="rubberBand" id="pencil-icon"></i>
             <div id="start-body">
-                <p class="text-center h2" id="start-promt">&nbsp;How well do you know Web APIs? Take this test within the given time limit to test your skills! <span style="font-size: 1rem;"><br><strong>Caution: incorrect scores penalize you time score by 5 seconds.</strong><br></span></p><button class="btn" id="start-btn" type="button">start</button>
+                <p class="text-center h2" id="start-prompt">&nbsp;How well do you know Web APIs? Take this test within the given time limit to test your skills! <span><br><strong>Caution: incorrect scores penalize you time score by 5 seconds.</strong><br></span></p><button class="btn" id="start-button" type="button">start</button>
+            </div>
+            <div id="question-body" class="visually-hidden">
+                <p id="question" class="h2">Here is the first coding question!</p><button class="btn answer-card" id="answer-1" type="button"><span>answer 1</span></button><button class="btn answer-card" id="answer-2" type="button"><span>answer 2</span></button><button class="btn answer-card" id="answer-3" type="button"><span>answer 3</span></button><button class="btn answer-card" id="answer-4" type="button"><span>answer 4</span></button>
+            </div>
+            <div id="score-body" class="visually-hidden">
+                <p class="text-center h2">Completed! ⭐<span><br>Your score is listed below<br></span></p>
+                <hr class="d-flex flex-grow-1 justify-content-center" style="width: 197px;">
+                <h1 id="score">54</h1><span id="score-out-of">9/10</span>
+            </div>
+            <div id="highscore-body" class="visually-hidden">
+                <p class="text-center h2">Completed! ⭐<span><br>Your score is listed below<br></span></p>
+                <hr class="d-flex flex-grow-1 justify-content-center" style="width: 197px;">
+                <div id="score-place-1" class="highscore-card"><span id="name" class="h2">user</span><span id="highscore" class="h1">54</span><span id="score-out-of">9/10</span></div>
             </div>
         </div>
     </main>
