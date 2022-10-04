@@ -26,9 +26,9 @@
                 <i class="fas fa-pencil-alt" id="pencil-icon"></i><br>
             </span>
                 
-                <a id="view-high-scores" href="#">
+                <span onclick="showHighscores()" id="view-high-scores">
                     <span>view high scores</span><br>
-                </a>
+                </span>
                 
                 <span class="text-nowrap d-md-flex align-items-md-center" id="time-label">
                     <span id="label">time:&nbsp;</span>&nbsp;
@@ -97,7 +97,38 @@
             </div>
 
         </div>
-<!------- BEGIN quiz-card -------->
+        <!------- score-body -------->
+        <div id="score-body" class="visually-hidden">
+            <p class="text-center h2">Completed! ⭐
+                <span><br>Your score is listed below<br></span>
+            </p>
+            <hr class="d-flex flex-grow-1 justify-content-center" style="width: 197px;">
+            <h1 id="score">54</h1><span id="score-out-of">9/10</span>
+        </div>
+    </div>
+</div>
+<!------- END quiz-card -------->
+
+
+
+<!------- BEGIN highscore-card -------->
+    <div id="highscore-card" class="visually-hidden">
+        <i class="fas fa-medal " id="medal-icon"></i>
+
+                <!------- highscore-body -------->
+        <div id="highscore-body">
+            <p class="text-center h2">Highscores
+                <span><br>Here are your top scores<br></span>
+            </p>
+            <hr class="d-flex flex-grow-1 justify-content-center" style="width: 197px;">
+            <div id="score-place-1" class="highscore-card">
+                <span id="name" class="h2">user</span><span id="highscore" class="h1">54</span>
+                <span id="score-out-of">9/10</span></div>
+        </div>
+
+    </div>
+<!------- END highscore-card -------->
+
     </main>
 <!------- END main -------->
 
@@ -112,7 +143,7 @@
 <!------- END footer -------->
 
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="scripts.js"></script>
+    <script src="assets/js/scripts.js"></script>
 </body>
 
 </html>

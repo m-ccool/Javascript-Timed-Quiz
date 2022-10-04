@@ -107,7 +107,12 @@ hr {
 }
 
 #view-high-scores span {
+  color: rgba(33, 37, 41, 0.5);
+  transition: color 650ms ease;
+}
+#view-high-scores span:hover {
   color: rgb(33, 37, 41);
+  transition: color 650ms ease;
 }
 
 #nav-name {
@@ -274,7 +279,31 @@ hr {
 /* END question-body */
 
 
-/* START highscore-body */
+/* START highscore-card */
+
+#highscore-card {
+  transition: all 500ms ease;
+  border-radius: 2.5rem;
+  padding: 2rem;
+  width: 75%;
+  max-width: calc(750px + 5vw);
+  background-color: white;
+  box-shadow: 0px 9px 20px 4px rgba(130,130,130,0.5);
+  align-items: center!important;
+  justify-content: center!important;
+  flex-direction: column!important;
+  display: flex!important;
+}
+
+#highscore-card p {
+  text-align: center!important;
+  margin: .25rem 1rem;
+}
+
+#pencil-icon {
+  margin: 0 1rem;
+  color: var(--gray);
+}
 
 #highscore-body {
   align-items: center!important;

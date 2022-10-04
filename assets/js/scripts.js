@@ -65,18 +65,27 @@ function setTime() {
 // start quiz onClick
 
 function startQuiz() {
-    var startbody = document.getElementById("start-body");
-    startbody.classList.add("visually-hidden");
+    var startBody = document.getElementById("start-body");
+    startBody.classList.add("visually-hidden");
 
-    var questionbody = document.getElementById("question-body");
-    questionbody.classList.remove("visually-hidden");
+    var questionBody = document.getElementById("question-body");
+    questionBody.classList.remove("visually-hidden");
     
     loadQuestion(0);
 
     setTime();
+}
 
-// view high scores onClick
+// view highscores onClick
 
-document.getElementById("view-high-scores").onClick = function () {
+function showHighscores() {
+    document.getElementById("title").textContent="high scores ⭐";
+    document.getElementById("title-2").textContent="How code progressive are you?";
 
+
+    var quizCard = document.getElementById("quiz-card");
+    quizCard.classList.add("visually-hidden");
+
+    var highscoreCard = document.getElementById("highscore-card");
+    highscoreCard.classList.remove("visually-hidden");
 }
