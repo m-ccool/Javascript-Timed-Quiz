@@ -1,4 +1,4 @@
-/* global */
+/* START global */
 
 :root {
   --white: #ffffff;
@@ -61,6 +61,16 @@ a:active {
   transition: opacity 50ms ease;
 }
 
+hr {
+  width: calc(5rem + 75%)!important;
+  height: 1px!important;
+  margin: 1rem 0;
+  color: gray;
+  background-color: currentColor;
+  border: 0;
+  opacity: .25;
+}
+
 .font-gradient {
   background-size: 250% 250%!important;
   animation: gradient 5s ease infinite;
@@ -70,7 +80,9 @@ a:active {
   -webkit-text-fill-color: transparent;
 }
 
-/* navbar */
+/* END global */
+
+/* BEGIN navbar */
 
 .navbar {
   padding: 1rem calc(.25rem + .75vw)!important;
@@ -83,8 +95,19 @@ a:active {
   padding-bottom: .5rem;
 }
 
+#time-label {
+  margin-left: calc(1rem + 5%);
+  align-items: center!important;
+  display: flex!important;
+  white-space: nowrap!important;
+}
+
 #time-label #label {
   opacity: .5;
+}
+
+#view-high-scores span {
+  color: rgb(33, 37, 41);
 }
 
 #nav-name {
@@ -92,12 +115,41 @@ a:active {
   color: var(--bs-dark);
 }
 
+.navbar-brand {
+  padding-top: .3125rem;
+  padding-bottom: .3125rem;
+  margin-right: 1rem;
+  font-size: 1.25rem;
+  text-decoration: none;
+  white-space: nowrap;
+}
 
-#time-label {
-  margin-left: calc(1rem + 5%);
-  align-items: center!important;
-  display: flex!important;
-  white-space: nowrap!important;
+#timer-output {
+  opacity: 1;
+  font-size: calc(1.325rem + .9vw);
+  font-weight: 500;
+}
+
+#timer-output .off {
+  opacity: .5;
+  font-size: calc(1.325rem + .9vw);
+  font-weight: 500;
+}
+
+/* END navbar */
+
+
+/* START main */
+
+#title {
+  margin-top: 2.5rem;
+}
+
+#title-2 {
+  opacity: .5;
+  margin-bottom: 2.5rem;
+  font-size: 1rem;
+  font-weight: initial;
 }
 
 #quiz-card {
@@ -114,19 +166,37 @@ a:active {
   display: flex!important;
 }
 
-/* main */
-
-#title {
-  margin-top: 2.5rem;
+#quiz-card p {
+  text-align: center!important;
+  margin: .25rem 1rem;
 }
 
-.navbar-brand {
-  padding-top: .3125rem;
-  padding-bottom: .3125rem;
-  margin-right: 1rem;
-  font-size: 1.25rem;
-  text-decoration: none;
-  white-space: nowrap;
+#pencil-icon {
+  margin: 0 1rem;
+  color: var(--gray);
+}
+
+#quiz-card #pencil-icon {
+  font-size: calc(2.5rem + .5vw);
+  margin: 1.5rem;
+  color: var(--gray);
+}
+
+#medal-icon {
+  font-size: calc(2.5rem + .5vw);
+  margin: 1.5rem;
+  color: var(--gray);
+}
+
+/* END main */
+
+/* START start-body */
+
+#start-body {
+  align-items: center!important;
+  justify-content: center!important;
+  flex-direction: column!important;
+  display: flex!important;
 }
 
 #start-button {
@@ -152,41 +222,20 @@ a:active {
   color: white;
 }
 
-footer span {
-  text-align: center!important;
+#start-prompt span {
+  font-size: 1rem;
+}
+
+/* END start-body */
+
+
+/* START question-body */
+
+#question-body {
+  align-items: center!important;
   justify-content: center!important;
+  flex-direction: column!important;
   display: flex!important;
-  font-size: calc(1rem + .25vw);
-  font-weight: 500;
-}
-
-#pencil-icon {
-  margin: 0 1rem;
-  color: var(--gray);
-}
-
-#quiz-card #pencil-icon {
-  font-size: calc(2.5rem + .5vw);
-  margin: 1.5rem;
-  color: var(--gray);
-}
-
-#medal-icon {
-  font-size: calc(2.5rem + .5vw);
-  margin: 1.5rem;
-  color: var(--gray);
-}
-
-#timer-output {
-  opacity: 1;
-  font-size: calc(1.325rem + .9vw);
-  font-weight: 500;
-}
-
-#timer-output .off {
-  opacity: .5;
-  font-size: calc(1.325rem + .9vw);
-  font-weight: 500;
 }
 
 .answer-card {
@@ -204,16 +253,10 @@ footer span {
 }
 
 .answer-card span {
-  /*margin-left: 10%;*/
   font-size: calc(1.25rem + .5vw);
   font-weight: 400;
   color: white;
   transition: color 500ms ease;
-}
-
-#quiz-card p {
-  text-align: center!important;
-  margin: .25rem 1rem;
 }
 
 .answer-card:hover {
@@ -228,21 +271,10 @@ footer span {
   transition: all 500ms ease;
 }
 
+/* END question-body */
 
 
-#question-body {
-  align-items: center!important;
-  justify-content: center!important;
-  flex-direction: column!important;
-  display: flex!important;
-}
-
-#start-body {
-  align-items: center!important;
-  justify-content: center!important;
-  flex-direction: column!important;
-  display: flex!important;
-}
+/* START highscore-body */
 
 #highscore-body {
   align-items: center!important;
@@ -251,28 +283,16 @@ footer span {
   display: flex!important;
 }
 
+/* END highscore-body */
+
+
+/* START score-body */
+
 #score-body {
   align-items: center!important;
   justify-content: center!important;
   flex-direction: column!important;
   display: flex!important;
-}
-
-#title-2 {
-  opacity: .5;
-  margin-bottom: 2.5rem;
-  font-size: 1rem;
-  font-weight: initial;
-}
-
-hr {
-  width: calc(5rem + 75%)!important;
-  height: 1px!important;
-  margin: 1rem 0;
-  color: gray;
-  background-color: currentColor;
-  border: 0;
-  opacity: .25;
 }
 
 #score-body span {
@@ -284,9 +304,10 @@ hr {
   margin-top: 2.5rem;
 }
 
+/* END score-body */
 
 
-
+/* START highscore-body */
 
 .highscore-card {
   text-align: center!important;
@@ -300,17 +321,10 @@ hr {
   color: var(--green);
 }
 
+/* END highscore-body */
 
-#start-prompt span {
-  font-size: 1rem;
-}
 
-.off {
-  opacity: .5!important;
-  transition: inherit;
-}
-
-/* footer */ 
+/* START footer */ 
 
 footer {
   margin: 2.5rem;
@@ -318,6 +332,16 @@ footer {
   justify-content: center!important;
   display: flex!important;
 }
+
+footer span {
+  text-align: center!important;
+  justify-content: center!important;
+  display: flex!important;
+  font-size: calc(1rem + .25vw);
+  font-weight: 500;
+}
+
+/* END footer */
 
 /* @keyframe animations */
 
