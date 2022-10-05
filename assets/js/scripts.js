@@ -89,3 +89,17 @@ function showHighscores() {
     var highscoreCard = document.getElementById("highscore-card");
     highscoreCard.classList.remove("visually-hidden");
 }
+
+// back to quiz onClick
+
+function showQuiz() {
+    document.getElementById("title").textContent="click to start quiz";
+    document.getElementById("title-2").textContent="Progressive Web API Developer Quiz";
+
+
+    var quizCard = document.getElementById("quiz-card");
+    quizCard.classList.remove("visually-hidden");
+
+    var highscoreCard = document.getElementById("highscore-card");
+    highscoreCard.classList.add("visually-hidden");
+}

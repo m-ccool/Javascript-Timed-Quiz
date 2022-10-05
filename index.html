@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-scrollbar">
 
 <head>
     <meta charset="utf-8">
@@ -51,18 +51,18 @@
 
             <!------- start-body -------->
             <div id="start-body">
-                <p class="text-center h2" id="start-prompt">&nbsp;How well do you know Web APIs? Take this test within the given time limit to test your skills! 
+                <span class="text-center h2" id="start-prompt">&nbsp;How well do you know Web APIs? Take this test within the given time limit to test your skills! 
                     <span><br><strong>Caution: incorrect scores penalize you time score by 5 seconds.</strong><br></span>
-                </p>
+                </span>
                 <button onclick="startQuiz()"class="btn" id="start-button" type="button">start</button>
             </div>
 
             <!------- question-body -------->
             <div id="question-body" class="visually-hidden">
-                <p id="question" class="h2"></p>
+                <span id="question" class="h2"></span>
                 <div class="option-list">
                     <div class="answer">
-                        <button class="btn answer-card" id="answer-1" type="button">
+                    <button class="btn answer-card" id="answer-1" type="button">
                         <span>answer 1</span></button>
                     <button class="btn answer-card" id="answer-2" type="button">
                         <span>answer 2</span>
@@ -78,18 +78,18 @@
 
             <!------- score-body -------->
             <div id="score-body" class="visually-hidden">
-                <p class="text-center h2">Completed! ⭐
+                <span class="text-center h2">Completed! ⭐
                     <span><br>Your score is listed below<br></span>
-                </p>
+                </span>
                 <hr class="d-flex flex-grow-1 justify-content-center" style="width: 197px;">
                 <h1 id="score">54</h1><span id="score-out-of">9/10</span>
             </div>
 
             <!------- highscore-body -------->
             <div id="highscore-body" class="visually-hidden">
-                <p class="text-center h2">Highscores
+                <span class="text-center h2">Highscores
                     <span><br>Here are your top scores<br></span>
-                </p>
+                </span>
                 <hr class="d-flex flex-grow-1 justify-content-center" style="width: 197px;">
                 <div id="score-place-1" class="highscore-card">
                     <span id="name" class="h2">user</span><span id="highscore" class="h1">54</span>
@@ -99,9 +99,9 @@
         </div>
         <!------- score-body -------->
         <div id="score-body" class="visually-hidden">
-            <p class="text-center h2">Completed! ⭐
+            <span class="text-center h2">Completed! ⭐
                 <span><br>Your score is listed below<br></span>
-            </p>
+            </span>
             <hr class="d-flex flex-grow-1 justify-content-center" style="width: 197px;">
             <h1 id="score">54</h1><span id="score-out-of">9/10</span>
         </div>
@@ -115,11 +115,13 @@
     <div id="highscore-card" class="visually-hidden">
         <i class="fas fa-medal " id="medal-icon"></i>
 
+        <button onclick="showQuiz()"class="btn" id="back-button" type="button">back to quiz</button>
+
                 <!------- highscore-body -------->
         <div id="highscore-body">
-            <p class="text-center h2">Highscores
-                <span><br>Here are your top scores<br></span>
-            </p>
+            <span class="text-center h2">Highscores
+                <span class="h5"><br>Here are your top scores<br></span>
+            </span>
             <hr class="d-flex flex-grow-1 justify-content-center" style="width: 197px;">
             <div id="score-place-1" class="highscore-card">
                 <span id="name" class="h2">user</span><span id="highscore" class="h1">54</span>
